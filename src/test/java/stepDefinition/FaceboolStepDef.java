@@ -2,20 +2,29 @@ package stepDefinition;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import com.basePackage.BaseClass;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class FaceboolStepDef extends BaseClass {
-//	static WebDriver driver;
+private Scenario scenario;
+
+	//	static WebDriver driver;
 	// ChromeOptions chromeOptions = new ChromeOptions();
 	// chromeOptions.addArguments("--headless");
+	@Before
+    public void before(Scenario scenario) {
+        this.scenario = scenario;
+    }
+
 
 	@Given("open the facebbok url")
 	public void open_the_facebbok_url() {
@@ -35,6 +44,7 @@ public class FaceboolStepDef extends BaseClass {
 		setup();
 		driver.get("https://www.facebook.com/");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		Utils.attach(scenario);
 	}
 
 	@When("navigated to home page")
@@ -43,6 +53,7 @@ public class FaceboolStepDef extends BaseClass {
 		System.out.println(title);
 
 		String expected = "Facebook – log in or sign up";
+//		Utils.attach(null);
 		Assert.assertEquals(expected, title);
 	}
 
@@ -50,12 +61,14 @@ public class FaceboolStepDef extends BaseClass {
 	public void enter_user_name_and_passcode(String string, String string2) {
 		driver.findElement(By.name("email")).sendKeys(string);
 		driver.findElement(By.name("pass")).sendKeys(string2);
+//		Utils.attach(null);
 		driver.findElement(By.name("login")).click();
 	}
 
 	@Then("it should show the error message")
 	public void it_should_show_the_error_message() throws Exception {
 		Thread.sleep(3000);
+//		Utils.attach(null);
 	//	takeSnapShot("ErrorFacebookAttach");
 //		Assert.assertFalse(driver.findElement(By.xpath("(//a[contains(.,'Forgotten')])[1]")).isDisplayed());
 //		tearDown();
