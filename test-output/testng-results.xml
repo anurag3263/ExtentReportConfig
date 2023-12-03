@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-12T16:20:19 IST" name="Default suite" finished-at="2023-09-12T16:20:41 IST" duration-ms="22243">
+  <suite started-at="2023-12-03T20:18:14 IST" name="Default suite" finished-at="2023-12-03T20:18:40 IST" duration-ms="25899">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-09-12T16:20:19 IST" name="Default test" finished-at="2023-09-12T16:20:41 IST" duration-ms="22243">
+    <test started-at="2023-12-03T20:18:14 IST" name="Default test" finished-at="2023-12-03T20:18:40 IST" duration-ms="25899">
       <class name="com.anurag.runners.AppRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" started-at="2023-09-12T16:20:19 IST" name="setUpClass" finished-at="2023-09-12T16:20:20 IST" duration-ms="740" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" started-at="2023-12-03T20:18:14 IST" name="setUpClass" finished-at="2023-12-03T20:18:15 IST" duration-ms="754" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" started-at="2023-09-12T16:20:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-09-12T16:20:36 IST" duration-ms="16423" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" started-at="2023-12-03T20:18:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-12-03T20:18:33 IST" duration-ms="18176" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -27,14 +27,29 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertFalse(Assert.java:78)
+at org.testng.Assert.assertFalse(Assert.java:88)
+at stepDefinition.FaceboolStepDef.it_should_show_the_error_message(FaceboolStepDef.java:73)
+at ✽.it should show the error message(file:///Users/anuragchaturvedi/git/ExtentReportConfig/src/test/resources/Features/facebook.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" started-at="2023-09-12T16:20:36 IST" name="tearDownClass" finished-at="2023-09-12T16:20:41 IST" duration-ms="5016" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" started-at="2023-12-03T20:18:33 IST" name="tearDownClass" finished-at="2023-12-03T20:18:40 IST" duration-ms="6897" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" started-at="2023-09-12T16:20:41 IST" name="generateReport" finished-at="2023-09-12T16:20:42 IST" duration-ms="962" status="PASS">
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:com.anurag.runners.AppRunner@5745ca0e]" started-at="2023-12-03T20:18:40 IST" name="generateReport" finished-at="2023-12-03T20:18:41 IST" duration-ms="1031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->

@@ -53,7 +53,7 @@ private Scenario scenario;
 		System.out.println(title);
 
 		String expected = "Facebook – log in or sign up";
-//		Utils.attach(null);
+		Utils.attach(scenario);
 		Assert.assertEquals(expected, title);
 	}
 
@@ -61,17 +61,17 @@ private Scenario scenario;
 	public void enter_user_name_and_passcode(String string, String string2) {
 		driver.findElement(By.name("email")).sendKeys(string);
 		driver.findElement(By.name("pass")).sendKeys(string2);
-//		Utils.attach(null);
+		Utils.attach(scenario);
 		driver.findElement(By.name("login")).click();
 	}
 
 	@Then("it should show the error message")
 	public void it_should_show_the_error_message() throws Exception {
 		Thread.sleep(3000);
-//		Utils.attach(null);
+		Utils.attach(scenario);
 	//	takeSnapShot("ErrorFacebookAttach");
-//		Assert.assertFalse(driver.findElement(By.xpath("(//a[contains(.,'Forgotten')])[1]")).isDisplayed());
-//		tearDown();
+		Assert.assertFalse(driver.findElement(By.xpath("(//a[contains(.,'Forgotten')])[1]")).isDisplayed());
+		tearDown();
 	}
 
 }
