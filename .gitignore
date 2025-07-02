@@ -1,1 +1,10 @@
 /target/
+/.apt_generated/
+/.apt_generated_tests/
+.allure/
+.DS_Store
+/test-output
+.classpath
+.settings/
+.project
+.vscode
